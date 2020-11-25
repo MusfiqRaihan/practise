@@ -1,16 +1,13 @@
 {% extends 'base.html' %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title  %}
-            Contact page
-        {% endblock title %}</title>
-</head>
-<body>
+{% load static %}
+
+{% block title  %}
+    Contact page
+{% endblock title %}
 
 {% block content %}
 
+    <img src="{% static 'images/background.jpg' %}" alt="">
     <h3 class="text-center mt-5 mb-5">Contact Us</h3>
     <form action="" method="" class="from-group mr-auto ml-auto col-md-6">
     <div class="form-group">
@@ -29,7 +26,3 @@
 
 
 {% endblock content %}
-
-
-</body>
-</html>
