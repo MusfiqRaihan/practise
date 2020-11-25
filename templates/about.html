@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title  %}
+            About page
+        {% endblock title %}</title>
+</head>
+<body>
+
+{% block content %}
+
+
+    <div class="row justify-content-md-center">
+            <div class="mbr-white col-md-10">
+                <h3 class="display-3 text-center mt-5 mb-5">{{ heading }}</h3>
+                <p class="text-center  display-5">{{ h_desc }}</p>
+                <div class="text-center ">
+                    <a class="btn btn-lg btn-outline-secondary mt-5" href="{% url 'contact-page' %}">CONTACT US</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}
+
+
+</body>
+</html>
