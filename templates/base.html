@@ -43,15 +43,11 @@
     {% block content %}
 
 {% endblock content %}
-
-    <footer class="text-muted">
+<footer class="text-muted">
         <div class="container">
-            <p class="float-right">
-                <a href="{% url 'home-page' %}">Back to top</a>
-            </p>
-            <p class="text-left text-dark">Teams &copy;{% now 'Y' %}</p>
+            <p class="text-center text-dark mt-5 mb-1">Teams &copy;{% now 'Y' %}</p>
         </div>
-    </footer>
+</footer>
 
 </div>
 

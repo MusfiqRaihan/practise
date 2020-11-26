@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import MyTest
+from .models import MyTest, ContactInfo
 
 items = MyTest.objects.all()
 
@@ -31,4 +31,17 @@ def about(request):
 
 
 def contact(request):
+    if request.method == "POST":
+        cname = request.POST.get('name')
+        cemail = request.POST.get('email')
+        ccomment = request.POST.get('comment')
+
+        data = ContactInfo()
+
+        data.name = cname
+        data.email = cemail
+        data.comment = ccomment
+
+        data.save()
+
     return render(request, 'contact.html')

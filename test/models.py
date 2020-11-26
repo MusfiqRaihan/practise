@@ -9,3 +9,12 @@ class MyTest(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class ContactInfo(models.Model):
+    name = models.CharField(max_length=100, blank=False)
+    email = models.EmailField(max_length=100, blank=False)
+    comment = models.TextField(max_length=1000, blank=True)
+
+    def __str__(self):
+        return self.name
